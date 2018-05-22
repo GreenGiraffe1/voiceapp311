@@ -2,6 +2,46 @@
   "interactionModel": {
     "languageModel": {
       "invocationName": "boston data",
+      "types": [
+        {
+          "name": "LIST_OF_CR_STATIONS",
+          "values": [
+            {
+              "id": "TRAIN",
+              "name": {
+                "value": "taking the train",
+                "synonyms": [
+                  "train",
+                  "train ride"
+                ]
+              }
+            },
+            {
+              "id": "FLY",
+              "name": {
+                "value": "flying",
+                "synonyms": [
+                  "jet",
+                  "fly",
+                  "on an airplane"
+                ]
+              }
+            },
+            {
+              "id": "DRIVE",
+              "name": {
+                "value": "driving",
+                "synonyms": [
+                  "auto",
+                  "automobile",
+                  "taking a road trip",
+                  "road trip"
+                ]
+              }
+            }
+          ]
+        }
+      ],
       "intents": [
         {
           "name": "SetAddressIntent",
@@ -63,6 +103,37 @@
             "are there any emergencies",
             "are services running normally",
             "all alerts"
+          ]
+        },
+        {
+          "name": "CommuterRailIntent",
+          "slots": [
+            {
+              "name": "Origin",
+              "type": "LIST_OF_CR_STATIONS"
+            },
+            {
+              "name": "Destination",
+              "type": "LIST_OF_CR_STATIONS"
+            }
+          ],
+          "samples": [
+            "when is the train from {Origin} to {Destination}",
+            "when is the next train from {Origin} to {Destination}",
+            "what time is the train from {Origin} to {Destination}",
+            "when can I get a train from {Origin} to {Destination}",
+            "when is the train from {Origin} station to {Destination} station",
+            "when is the next train from {Origin} station to {Destination} station",
+            "what time is the train from {Origin} station to {Destination} station",
+            "when can I get a train from {Origin} station to {Destination} station",
+            "when is the train to {Destination} from {Origin}",
+            "when is the next train to {Destination} from {Origin}",
+            "what time is the train to {Destination} from {Origin}",
+            "when can I get a train to {Destination} from {Origin}",
+            "when is the train to {Destination} station from {Origin} station",
+            "when is the next train to {Destination} station from {Origin} station",
+            "what time is the train to {Destination} station from {Origin} station",
+            "when can I get a train to {Destination} station from {Origin} station"
           ]
         },
         {
