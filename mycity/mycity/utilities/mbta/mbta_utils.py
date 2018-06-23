@@ -3,7 +3,10 @@ from datetime import date, time, datetime, timedelta
 import json
 import requests
 
-MBTA_API_KEY = "b7b42fecd47d416484ed1a3a4d67632a"
+from mbta_api_key import mbta_token
+
+
+MBTA_API_KEY = mbta_token
 TEST_DEPARTURE_STATION = "place-north"
 TEST_ARRIVAL_STATION = "Andover"
 TEST_ROUTE = "CR-Haverhill"
