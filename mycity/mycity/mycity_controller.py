@@ -16,6 +16,7 @@ from .intents.get_alerts_intent import get_alerts_intent, get_inclement_weather_
 from .intents.snow_parking_intent import get_snow_emergency_parking_intent
 from .intents.feedback_intent import submit_feedback
 from .intents.crime_activity_intent import get_crime_incidents_intent
+from .intents.property_assessment_intent import get_property_assessment_intent
 from .intents import intent_constants
 import logging
 
@@ -145,6 +146,8 @@ def on_intent(mycity_request):
         return get_311_requests(mycity_request)
     elif mycity_request.intent_name == "InclementWeatherIntent":
         return get_inclement_weather_alert(mycity_request)
+    elif mycity_request.intent_name == "PropertyAssessmentIntent":
+        return get_property_assessment_intent(mycity_request)
     else:
         raise ValueError("Invalid intent")
 

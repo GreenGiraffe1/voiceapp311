@@ -998,6 +998,23 @@
                     ]
                 },
                 {
+                    "name": "PropertyAssessmentIntent",
+                    "slots": [
+                        {
+                            "name": "Address",
+                            "type": "AMAZON.PostalAddress",
+                            "samples": [
+                                "My address is {Address}",
+                                "It's {Address}",
+                                "{Address}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "How much is this house worth"
+                    ]
+                },
+                {
                     "name": "CrimeIncidentsIntent",
                     "slots": [
                         {
